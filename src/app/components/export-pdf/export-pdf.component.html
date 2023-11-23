@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<section class="vh-100 gradient-custom">
+    <div class="container container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title text-center">Seleccionar Datos para Exportar</h5>
+              </div>
+              <div class="card-body">
+     <!-- En el archivo form.component.html -->
+    <form [formGroup]="exportForm" (ngSubmit)="exportarPDF()">
+        <div class="form-group">
+          <label for="exportOption">Seleccionar opción:</label>
+          <select class="form-control" id="exportOption" formControlName="exportOption">
+            <option value="apiData">Datos de la API</option>
+            <option value="googleColabResults">Resultados de Google Colab</option>
+          </select>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Exportar a PDF</button>
+      </form>
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+</section>
+
+
+<app-footer></app-footer>

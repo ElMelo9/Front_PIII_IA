@@ -1,0 +1,23 @@
+<div class="modal-header bg-primary text-white">
+  <h4 class="modal-title">Datos del formulario</h4>
+  <button type="button" class="close text-white" (click)="modalRef.hide()">&times;</button>
+</div>
+<div class="modal-body">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="font-weight-bold">Datos del formulario:</p>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Calidad del Aire
+            <span class="badge badge-primary badge-pill">{{ calidadAire }}</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Contaminación del Agua
+            <span class="badge badge-primary badge-pill">{{ contaminacionAgua }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

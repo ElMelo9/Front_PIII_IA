@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center my-5">
+                        <h1  *ngIf="userData" class="display-5 fw-bolder text-white mb-2">Bienvenido de vuelta <br>{{ userData.fullName.join(' ') }} !</h1>
+                        <p class="lead text-white-50 mb-4">Selecciona una opcion para empezar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Pricing section-->
+    <section class="gradient-custom py-5 border-bottom">
+        <div class="container px-5 my-5">
+            <div class="row gx-5 justify-content-center">
+                <!-- Pricing card free-->
+                <div *ngIf="userData.rol == 1" class="col-lg-6 col-xl-4">
+                    <div class="card mb-5 mb-xl-0">
+                        <div class="card-body p-5">
+                            <div class="mb-3">
+                                <span class="display-6 fw-bold">Google Colab</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Visualiza los resultados de la regresion logistica realizada con la data propuesta
+                                </li>
+                            </ul>
+                            <div class="d-grid"><a class="btn btn-outline-primary" routerLink="/gocolab">ir</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="userData.rol == 1" class="col-lg-6 col-xl-4">
+                    <div class="card mb-5 mb-xl-0">
+                        <div class="card-body p-5">
+                            <div class="mb-3">
+                                <span class="display-6 fw-bold">Exportar</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Exporta los resultados propuestos asi como los nuevo dato ingresados a traves del formulario en formato PDF
+                                </li>
+                            </ul>
+                            <div class="d-grid"><a class="btn btn-outline-primary" routerLink="/export">ir</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="userData.rol == 2" class="col-lg-6 col-xl-4">
+                    <div class="card mb-5 mb-xl-0">
+                        <div class="card-body p-5">
+                            <div class="mb-3">
+                                <span class="display-6 fw-bold">Formulario</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Diligencia el formulario prupuesto para obtener una prediccion con redes neuronales
+                                </li>
+                            </ul>
+                            <div class="d-grid"><a class="btn btn-outline-primary" routerLink="/form">ir</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<app-footer></app-footer>
