@@ -45,7 +45,7 @@ export class FormComponent {
   }
 
   openModal(response: any) {
-    const { 'Calidad del aire': calidadAire, 'Contaminación del agua': contaminacionAgua } = response;
+    const { 'air_quality': calidadAire, 'water_pollution': contaminacionAgua } = response;
   
     const message = `Calidad del Aire: ${calidadAire}\nContaminación del Agua: ${contaminacionAgua}`;
   
